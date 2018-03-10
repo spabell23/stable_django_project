@@ -2404,6 +2404,9 @@ img {
   left: 16px;
 }
 /*!---------- 29. IMAGE BLOCKS ----------*/
+.image-logo {
+  max-height: 65px;
+}
 .image-small {
   max-height: 80px;
 }
