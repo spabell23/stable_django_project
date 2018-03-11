@@ -14,7 +14,7 @@ Including another URLconf
     2. Add a URL to urlpatterns:  path('blog/', include('blog.urls'))
 """
 from django.contrib import admin
-from django.urls import path
+from django.urls import path, re_path
 from flux.views import *
 from django.conf.urls.static import static
 from django.conf import settings
@@ -22,7 +22,8 @@ from django.conf import settings
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('',HomePageView.as_view()),
-    path('aboutus',AboutUs.as_view()),
-    path('news',News.as_view()),
+    # path('aboutus',AboutUs.as_view()),
+    # path('news',News.as_view()),
+    re_path(r'^(.*?)$', DynamicUrl.as_view()),
     # path('a/*', admin.site.urls),
 ]
