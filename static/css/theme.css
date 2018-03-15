@@ -5,6 +5,11 @@
 
 
  /*!--------- 1. SOMNUS SPECIFIC ----------*/
+
+.dynamic-content {
+    display:none;
+}
+
 .pull-bottom-half {
   z-index: 10;
 }
