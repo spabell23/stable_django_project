@@ -22,8 +22,5 @@ from django.conf import settings
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('',HomePageView.as_view()),
-    # path('aboutus',AboutUs.as_view()),
-    # path('news',News.as_view()),
     re_path(r'^(.*?)$', DynamicUrl.as_view()),
-    # path('a/*', admin.site.urls),
 ]
