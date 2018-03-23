@@ -27,13 +27,16 @@
 	}
 	// Give the parameter a variable name
 	var dynamicContent = getParameterByName('dc');
- 
+
 	 $(document).ready(function() {
- 
+
 		// Check if the URL parameter is email
 		if (dynamicContent == 'email') {
 			$('#email').show();
-		} 
+		}
+    else if (dynamicContent == 'contactus') {
+      $('#contactus').show();
+    }
 		// Check if the URL parmeter is empty or not defined, display default content
 		else {
 			$('#default-content').show();
@@ -59,8 +62,18 @@
 						<span class="fade-1-4">Thanks for signing up! Keep an eye on your inbox for our next newsletter.</span>
 					</div>
 
-					
+
 				</div>
+
+        <div class="dynamic-content nav-utility bg-dark text-center" id="contactus">
+
+					<div class="col-sm-12 text-center">
+						<span class="fade-1-4">Thanks for dropping us a line! We will get back to you soon!</span>
+					</div>
+
+
+				</div>
+
 
 
 				<div class="nav-utility">
@@ -125,7 +138,7 @@
 					<div class="bg-secondary pt64 pb64">
 						<h4 class="uppercase mb16">Be the First to Know</h4>
 						<p>
-							Get the latest updates, news, and special offers! 
+							Get the latest updates, news, and special offers!
 						</p>
 
 <form action="https://clevelandrocksclimbing.us12.list-manage.com/subscribe/post" method="POST" class="form-newsletter" data-success="Thanks, we'll get back to you shortly." data-error="Please fill all required fields." >
@@ -134,7 +147,7 @@
 							<input type="text" name="MERGE0" class="validate-required validate-email signup-email-field" placeholder="Enter Email" />
 							<input type="submit" class="btn" value="Sign Up" />
 
-						</form>				
+						</form>
 
 					</div>
 				</div>
@@ -179,5 +192,3 @@
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     </body>
 </html>
-
-js
