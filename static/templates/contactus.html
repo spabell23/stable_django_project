@@ -1,7 +1,7 @@
 {% extends 'main.html' %}
 
 {% block content %}
-
+{% load widget_tweaks %}
 			<section class="p0 fullwidth-map">
 				<div class="map-holder pt240 pb240 pt-xs-120 pb-xs-120">
 					<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2988.794384604556!2d-81.71158684984177!3d41.48705719767311!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8830f06964466579%3A0x9817ee856aa29914!2sCleveland+Rocks*21!5e0!3m2!1sen!2sus!4v1521148033639"></iframe>
@@ -42,10 +42,15 @@
 								<div class="col-sm-6 height-100 bg-dark right">
 									<div class="pt64 p32 pb-xs-64">
 										<h4 class="uppercase">Drop a line</h4>
-										<form class="form-email" data-error="Please fill all required fields" data-success="Thanks for your enquiry, we'll be in touch soon.">
-											<input type="text" name="name" placeholder="Your Name" class="transparent validate-required" />
+										<!-- <form class="form-email" data-error="Please fill all required fields" data-success="Thanks for your enquiry, we'll be in touch soon."> -->
+										<form method="post">
+											{% csrf_token %}
+											{{ form.name | add_class:"transparent validate-required"}}
+											{{ form.email | add_class:"transparent validate-required" }}
+											{{ form.message | add_class:"transparent" }}
+											 <!-- <input type="text" name="name" placeholder="Your Name" class="transparent validate-required" />
 											<input type="text" name="email" placeholder="Email Address" class="transparent validate-required validate-email" />
-											<textarea name="message" placeholder="Your Message" rows="3" class="transparent"></textarea>
+											<textarea name="message" placeholder="Your Message" rows="3" class="transparent"></textarea>  -->
 											<input class="mb0 btn btn-white btn-filled" type="submit" value="Send Message" />
 										</form>
 									</div>
