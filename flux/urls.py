@@ -25,5 +25,8 @@ from django.views.generic.base import RedirectView
 
 urlpatterns = [
     path('admin/', admin.site.urls),
+    path('',Home.as_view()),
     re_path(r'^(.*?)$', DynamicUrl.as_view()),
-]
+    
+
+    ]

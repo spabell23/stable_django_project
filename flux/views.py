@@ -8,7 +8,8 @@ class ContactForm(forms.Form):
     name = forms.CharField( widget=forms.TextInput(attrs={'placeholder': 'Name'}))
     email = forms.CharField( widget=forms.TextInput(attrs={'placeholder': 'Email'}))
     message = forms.CharField( widget=forms.TextInput(attrs={'placeholder': 'Message'}))
-
+class Home(TemplateView):
+    template_name = "index.html"
 
 class DynamicUrl(FormView):
     form_class = ContactForm

@@ -23,10 +23,11 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 SECRET_KEY = '7fd5^_bgzmq!8!-7zm=b*w3jfgk4bkn!0i+hfx(3mh!$!+pqan'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
-
-ALLOWED_HOSTS = ['clevelandrocksnew.herokuapp.com','localhost:8000','clevelandrocksclimbing.com']
-
+DEBUG = False
+ALLOWED_HOSTS = ['clevelandrocks2.herokuapp.com',
+                 'localhost',
+                 'clevelandrocksclimbing.com',
+                 'www.clevelandrocksclimbing.com']
 
 # Application definition
 
@@ -41,7 +42,9 @@ INSTALLED_APPS = [
 ]
 
 MIDDLEWARE = [
+
     'django.middleware.security.SecurityMiddleware',
+    'whitenoise.middleware.WhiteNoiseMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
     'django.middleware.common.CommonMiddleware',
     'django.middleware.csrf.CsrfViewMiddleware',
