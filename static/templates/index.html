@@ -71,7 +71,7 @@
 			<div class="row">
 				<div class="col-sm-12 text-center">
 					<!-- <h2 class="uppercase mb48">Adventure Awaits</h2> -->
-					<h2 class="uppercase mb48">Under Construction </h2>
+					<h2 class="uppercase mb48">Adventure Awaits!</h2>
 					<a class="btn btn-lg block-xs" href="/aboutus">Learn More</a><br />
 				</div>
 			</div><!--end of row-->
@@ -80,29 +80,41 @@
 
 	<section class="pb0" data-sr="enter bottom move 20px over .5s and scale 0% and wait 0s">
 		<div class="container pull-bottom-half">
+
+
+
+			{% if object_list %}
 			<div class="row">
 				<div class="col-sm-12" style="margin-bottom:120px;">
 					<div class="pt64 pb24 bg-secondary">
 						<h4 class="text-center uppercase mb64 mb-xs-40">Upcoming Events</h4>
-						<ul class="mb0">
+							{% for event in object_list %}
 
-							<li class="overflow-hidden text-center-sm mb40">
-								<div class="col-md-2 col-md-offset-1 mb24">
-									<span class="title mb16">Cleveland Rocks Meetup</span>
-									<span>Thursday, April 5th 7:30-9pm</span>
-								</div>
 
-								<div class="col-md-8 mb24" >
-									<p class="mb0">
-											Calling all technologists, entrepreneurs, and climbers/outdoor enthusiasts! Come join us at Jukebox for our monthly meet up. This event is a great way to meet other outdoor enthusiasts, technologists, and community-oriented individuals. There is a special discount on drinks.
-									</p>
-								</div>
-							</li>
+									<ul class="mb0">
 
-						</ul>
+										<li class="overflow-hidden text-center-sm mb40">
+											<div class="col-md-2 col-md-offset-1 mb24">
+												<span class="title mb16">{{ event.title }}</span>
+													<span> {{ event.time_begin|date:"l, F jS f" }}-{{ event.time_end|date:"P"}}</span>
+											</div>
+
+											<div class="col-md-8 mb24" >
+												<p class="mb0">
+														{{ event.message }}
+												</p>
+											</div>
+										</li>
+
+									</ul>
+
+						{% endfor %}
+
 					</div>
 				</div>
 			</div>
+			{% endif %}
+
 		</div>
 
 		<div class="pt240 pb240 relative">
