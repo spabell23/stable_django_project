@@ -1,4 +1,4 @@
-"""flux URL Configuration
+"""clevelandrocks URL Configuration
 
 The `urlpatterns` list routes URLs to views. For more information please see:
     https://docs.djangoproject.com/en/2.0/topics/http/urls/
@@ -15,7 +15,7 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path, re_path
-from flux.views import *
+from clevelandrocks.views import *
 from django.conf.urls.static import static
 from django.conf import settings
 
@@ -27,6 +27,4 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     path('',Home.as_view()),
     re_path(r'^(.*?)$', DynamicUrl.as_view()),
-    
-
     ]
