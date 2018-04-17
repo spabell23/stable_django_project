@@ -22,14 +22,13 @@ class Home(ListView):
 
     def get_queryset(self):
 
-        qs = super().get_queryset()
-
+        qs = super().get_queryset().order_by('time_begin')
         return qs.filter(time_begin__gte=timezone.now())
 
 class DynamicUrl(FormView):
     form_class = ContactForm
     success_url= "/contactus?dc=contactus"
-    # template_name = "aboutus.html"
+
     def get_context_data(self, **kwargs):
         context = super().get_context_data(**kwargs)
         return context
