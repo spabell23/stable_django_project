@@ -1,1 +1,1 @@
-web: gunicorn clevelandrocks.wsgi --log-file -
+web: gunicorn stable_project.wsgi --log-file -
