@@ -9,8 +9,8 @@ To Run this project follow these instructions:
 `pip install -r requirements.txt`  
  
  
-`git checkout -b 'MY_BRANCH'` 
-`git status` 
-`git add . ` 
-`git commit -m 'MY_COMMIT_NAME'` 
-`git push MY_BRANCH origin ` 
+`git checkout -b 'MY_BRANCH'`   
+`git status`   
+`git add . `   
+`git commit -m 'MY_COMMIT_NAME'`   
+`git push MY_BRANCH origin `   
