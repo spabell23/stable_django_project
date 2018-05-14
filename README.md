@@ -6,7 +6,8 @@ To Run this project follow these instructions:
 `cd stable_django_project`  
 `virtualenv myenv/bin/activate`  
 `source myenv/bin/activate`  
-`pip install -r requirements.txt`  
+`pip install -r requirements.txt`    
+`python mange.py runserver`
  
  
 `git checkout -b 'MY_BRANCH'`   
