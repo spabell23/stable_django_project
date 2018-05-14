@@ -7,6 +7,7 @@ To Run this project follow these instructions:
 `virtualenv myenv/bin/activate`  
 `source myenv/bin/activate`  
 `pip install -r requirements.txt`    
+`python manage.py collectstatic`    
 `python mange.py runserver`
  
  
