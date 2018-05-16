@@ -82,16 +82,16 @@ WSGI_APPLICATION = 'stable_project.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/2.0/ref/settings/#databases
 
-# DATABASES = {
-#     'default': {
-#         'ENGINE': 'django.db.backends.sqlite3',
-#         'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
-#     }
-# }
+DATABASES = {
+     'default': {
+         'ENGINE': 'django.db.backends.sqlite3',
+         'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
+     }
+ }
 DATABASES = {}
 
 # DATABASES['default'] = dj_database_url.config(conn_max_age=600, ssl_require=True)
-DATABASES['default'] = dj_database_url.config(default='postgres://mmrlxwecwxcnpk:184797c9ae97e153d7f27c42b23eb5c60d1acc6d751dac2ab0181a4c05539243@ec2-54-221-212-15.compute-1.amazonaws.com:5432/d61p5r6snv07lr')
+#DATABASES['default'] = dj_database_url.config(default='postgres://mmrlxwecwxcnpk:184797c9ae97e153d7f27c42b23eb5c60d1acc6d751dac2ab0181a4c05539243@ec2-54-221-212-15.compute-1.amazonaws.com:5432/d61p5r6snv07lr')
 
 
 
