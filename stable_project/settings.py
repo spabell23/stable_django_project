@@ -33,7 +33,8 @@ ALLOWED_HOSTS = ['stable_project2.herokuapp.com',
                  'thisisanewapp231.herokuapp.com',
                  'localhost',
                  'stable_projectclimbing.com',
-                 'www.stable_projectclimbing.com']
+                 'www.stable_projectclimbing.com',
+                 'piersonpost.herokuapp.com']
 
 # Application definition
 
