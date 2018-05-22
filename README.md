@@ -1,4 +1,4 @@
-# stable_django_project
+# stable_django_project 
 
 To Run this project follow these instructions:  
 
