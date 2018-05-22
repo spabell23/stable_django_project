@@ -29,6 +29,7 @@ SECRET_KEY = '7fd5^_bgzmq!8!-7zm=b*w3jfgk4bkn!0i+hfx(3mh!$!+pqan'
 DEBUG = True
 
 ALLOWED_HOSTS = ['stable_project2.herokuapp.com',
+                 'mynewapp939.herokuapp.com',
                  'thisisanewapp231.herokuapp.com',
                  'localhost',
                  'stable_projectclimbing.com',
